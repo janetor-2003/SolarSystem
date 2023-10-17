@@ -1,16 +1,17 @@
-public class Driver
-{
-    public static void main (String args[]){
+public class Driver {
+    public static void main(String args[]) {
 
-        int angle = 0;
+        SolarSystem window = new SolarSystem(800, 800);
+        Sun sun = new Sun(100, window, "YELLOW");
+        Planet earth = new Planet(sun, window, 1, 10, "BLUE", 150, 180);
+        Planet mercury = new Planet(sun, window, 3, 6, "GRAY", 100, 60);
+        Planet mars = new Planet(sun, window, 2, 8, "RED", 200, 270);
 
-        SolarSystem window = new SolarSystem(500,500);
-
-    while(true)
-        {
-            window.drawSolarObject(0,0,100,"YELLOW"); //sun
-            window.drawSolarObjectAbout(0,180, 10, "BLUE",200,angle);
-            angle += 1;
+        while (true) {
+            earth.updatePosition(window);
+            sun.updatePosition(window);
+            mercury.updatePosition(window);
+            mars.updatePosition(window);
             window.finishedDrawing();
         }
     }
