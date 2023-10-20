@@ -1,12 +1,14 @@
 public class Planet {
-    private int speed;
+    private double speed;
     private int diameter;
     private int distance_from_sun;
     private String colour;
-    private int angle;
+    private double angle;
 
-    public Planet(Sun orbit_sun, SolarSystem window, int speed, int diameter, String colour, int distance_from_sun,
-            int angle) {
+    public Planet(Sun orbit_sun, SolarSystem window, double speed, int diameter,
+            String colour,
+            int distance_from_sun,
+            double angle) {
         this.diameter = diameter;
         this.speed = speed;
         this.colour = colour;
@@ -19,5 +21,17 @@ public class Planet {
     public void updatePosition(SolarSystem window) {
         angle += speed;
         window.drawSolarObjectAbout(0, 0, diameter, colour, distance_from_sun, angle);
+    }
+
+    public double getSpeed() {
+        return this.speed;
+    }
+
+    public int getDistanceFromSun() {
+        return this.distance_from_sun;
+    }
+
+    public double getAngle() {
+        return this.angle;
     }
 }
