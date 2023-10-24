@@ -3,7 +3,8 @@ public class Moon extends Planet {
     private double angle_planet;
     private int distance_from_planet;
     private int x;
-    private double y = 180;
+    private double y;
+    private double planetSpeed;
 
     public Moon(Sun orbit_sun, SolarSystem window, Planet parent, double speed, int diameter, String colour,
             double angle_planet, int distance_from_planet) {
@@ -12,16 +13,17 @@ public class Moon extends Planet {
         this.angle_planet = angle_planet;
         this.distance_from_planet = distance_from_planet;
         this.x = parent.getDistanceFromSun();
-        //this.y = parent.getAngle();
-
-        //window.drawSolarObjectAbout(x+distance_from_planet,100,50,colour,100,100);
+        this.y = parent.getAngle();
+        this.diameter = diameter;
+        this.speed = speed;
+        this.planetSpeed = parent.getSpeed();
 
     }
 
     public void updatePlanetPosition(SolarSystem window) {
-        angle_planet += 3;
-        y += 0.5;
-        window.drawSolarObjectAbout(x+distance_from_planet,y,5,"GRAY",25,angle_planet);
+        angle_planet += speed;
+        y += planetSpeed;
+        window.drawSolarObjectAbout(x + diameter, y, diameter, colour, distance_from_planet, angle_planet);
     }
 
 }

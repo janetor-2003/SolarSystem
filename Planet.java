@@ -1,8 +1,8 @@
 public class Planet {
-    private double speed;
-    private int diameter;
+    double speed;
+    int diameter;
     private int distance_from_sun;
-    private String colour;
+    String colour;
     private double angle;
 
     public Planet(Sun orbit_sun, SolarSystem window, double speed, int diameter,

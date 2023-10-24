@@ -8,17 +8,18 @@ public class Driver {
         Planet earth = new Planet(sun, window, 0.5, 10, "BLUE", 300, 180);
         Planet mars = new Planet(sun, window, 0.5, 5, "RED", 400, 270);
         Planet jupiter = new Planet(sun, window, 0.17, 56, "MAGENTA", 500, 180);
-        Moon earthMoon = new Moon(sun, window, earth, 1, 5, "GRAY", 0, 5);
+        Moon earthMoon = new Moon(sun, window, earth, 3, 5, "GRAY", 0, 25);
+        Moon marsMoon = new Moon(sun, window, mars, 5, 3, "MAGENTA", 0, 25);
 
         while (true) {
             earth.updatePosition(window);
             sun.updatePosition(window);
-            //earthMoon.updatePosition(window);
             earthMoon.updatePlanetPosition(window);
-             mercury.updatePosition(window);
-             mars.updatePosition(window);
-             venus.updatePosition(window);
-             jupiter.updatePosition(window);
+            marsMoon.updatePlanetPosition(window);
+            mercury.updatePosition(window);
+            mars.updatePosition(window);
+            venus.updatePosition(window);
+            jupiter.updatePosition(window);
             window.finishedDrawing();
         }
     }

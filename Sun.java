@@ -11,4 +11,5 @@ public class Sun {
     public void updatePosition(SolarSystem window) {
         window.drawSolarObject(0, 0, diameter, colour);
     }
+
 }
