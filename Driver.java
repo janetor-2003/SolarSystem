@@ -1,5 +1,5 @@
 public class Driver {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         SolarSystem window = new SolarSystem(1000, 1000);
         Sun sun = new Sun(150, window, "YELLOW");

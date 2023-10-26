@@ -12,10 +12,10 @@ public class SolarSystem extends JFrame
 {
 	private int width = 300;
 	private int height = 300;
-    private boolean exiting = false;
-    private Map<RenderingHints.Key, Object> renderingHints;
+    private final boolean exiting = false;
+    private final Map<RenderingHints.Key, Object> renderingHints;
 
-	private ArrayList<SolarObject> things = new ArrayList<SolarObject>();
+	private final ArrayList<SolarObject> things = new ArrayList<SolarObject>();
 
 	/**
 	 * Create a view of the Solar System.

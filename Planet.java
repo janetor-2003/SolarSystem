@@ -1,7 +1,7 @@
 public class Planet {
     double speed;
     int diameter;
-    private int distance_from_sun;
+    private final int distance_from_sun;
     String colour;
     private double angle;
 

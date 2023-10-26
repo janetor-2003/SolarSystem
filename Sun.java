@@ -1,6 +1,6 @@
 public class Sun {
-    private int diameter;
-    private String colour;
+    private final int diameter;
+    private final String colour;
 
     public Sun(int diameter, SolarSystem window, String colour) {
         this.diameter = diameter;

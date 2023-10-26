@@ -1,10 +1,10 @@
 public class Moon extends Planet {
 
     private double angle_planet;
-    private int distance_from_planet;
-    private int x;
+    private final int distance_from_planet;
+    private final int x;
     private double y;
-    private double planetSpeed;
+    private final double planetSpeed;
 
     public Moon(Sun orbit_sun, SolarSystem window, Planet parent, double speed, int diameter, String colour,
             double angle_planet, int distance_from_planet) {
