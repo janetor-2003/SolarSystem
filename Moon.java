@@ -6,6 +6,17 @@ public class Moon extends Planet {
     private double y;
     private final double planetSpeed;
 
+    /**
+     * Constructs moon object and places it in orbit of a planet
+     * @param orbit_sun
+     * @param window
+     * @param parent Planet moon is orbiting
+     * @param speed
+     * @param diameter
+     * @param colour
+     * @param angle_planet
+     * @param distance_from_planet
+     */
     public Moon(Sun orbit_sun, SolarSystem window, Planet parent, double speed, int diameter, String colour,
             double angle_planet, int distance_from_planet) {
         super(orbit_sun, window, parent.getSpeed(), diameter, colour,
